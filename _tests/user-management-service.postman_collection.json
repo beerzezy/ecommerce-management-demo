@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "df8b6bb7-e7cc-42c9-88f4-761cd5e7701d",
+		"name": "user-management-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5639394"
+	},
+	"item": [
+		{
+			"name": "accout-profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUGlldGVyIENsYWVyaG91dCIsImFkbWluIjp0cnVlLCJleHAiOjE2ODM2NTc4OTR9.q2185UPs4xRKKbT1YIlR83w7ZhkTj_u5PK8vP7mfvuM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test@test.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/user-management-service/account-info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"user-management-service",
+						"account-info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-request-from",
+						"value": "authentication-service",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fist_name\": \"Test\",\n    \"last_name\": \"Test\",\n    \"email\": \"test@test.com\",\n    \"password\": \"P@ssw0rd\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/user-management-service/registration",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"user-management-service",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
