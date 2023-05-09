@@ -1,0 +1,13 @@
+server:
+  port: 8080
+  context: "/user-management-service"
+jwt:
+  signingkey: "secret-key"
+  maxHour: 1
+database:
+  host: 192.168.0.8
+  port: 5433
+  dbname: usermanagementdb
+  username: postgres
+  password: password
+  sslmode: disable

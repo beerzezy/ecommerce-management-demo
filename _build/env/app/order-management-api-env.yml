@@ -1,0 +1,13 @@
+server:
+  port: 8080
+  context: "/order-management-service"
+jwt:
+  signingkey: "secret-key"
+  maxHour: 1
+database:
+  host: 192.168.0.8
+  port: 5432
+  dbname: postgres
+  username: postgres
+  password: password
+  sslmode: disable
